@@ -61,7 +61,7 @@ class AuthController extends Controller
             $request->session()->regenerate();
             return redirect()->intended('/');
         }
-        return back()->withErrors(['phone' => 'Невірний телефон або пароль.'])->withInput();
+        return back()->withErrors(['phone' => 'Incorrect phone number or password.'])->withInput();
     }
 
     /**
