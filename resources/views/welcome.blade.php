@@ -19,7 +19,38 @@
             </style>
         @endif
     </head>
-    <body>
-    Home page
-    </body>
+    <body class="min-h-screen flex flex-col home-bg bg-[#FDFDFC] dark:bg-[#0a0a0a] text-[#1b1b18]">
+    <!-- Header -->
+    <header class="w-full shadow home-header">
+        <nav class="container mx-auto flex items-center gap-8 py-4 px-6">
+            <a href="/" class="home-link font-semibold text-lg">Home</a>
+            <a href="#" class="home-link font-semibold text-lg">Profile</a>
+            <a href="#" class="home-link font-semibold text-lg">Map</a>
+        </nav>
+    </header>
+
+    <!-- Main Content + Sidebar -->
+    <main class="flex-1 container mx-auto flex flex-col lg:flex-row gap-6 px-6 py-8 w-full">
+        <section class="flex-1 lg:w-3/4 w-full mb-6 lg:mb-0 home-content" id="content">
+            <div class="home-content-block">
+                <h1 class="text-2xl font-bold mb-4">CityCard Головна</h1>
+                <p>Вітаємо у CityCard! Тут буде основний контент.</p>
+            </div>
+        </section>
+        <aside class="lg:w-1/4 w-full home-sidebar" id="sidebar">
+            <div class="home-sidebar-block dark:home-sidebar-block-dark">
+                <h2 class="text-xl font-semibold mb-2">Сайдбар</h2>
+                <ul class="space-y-2">
+                    <li><a href="#" class="home-link">Посилання 1</a></li>
+                    <li><a href="#" class="home-link">Посилання 2</a></li>
+                </ul>
+            </div>
+        </aside>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full home-footer text-center py-4 mt-auto">
+        <span>&copy; {{ date('Y') }} CityCard.</span>
+    </footer>
+</body>
 </html>
