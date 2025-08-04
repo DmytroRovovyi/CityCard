@@ -26,6 +26,17 @@
             <a href="/" class="home-link font-semibold text-lg">Home</a>
             <a href="#" class="home-link font-semibold text-lg">Profile</a>
             <a href="#" class="home-link font-semibold text-lg">Map</a>
+            <div class="ml-auto flex gap-4">
+                @auth
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+                        <button type="submit" class="home-link font-semibold text-lg">Logout</button>
+                    </form>
+                @else
+                    <a href="{{ route('login') }}" class="home-link font-semibold text-lg">Login</a>
+                    <a href="{{ route('register') }}" class="home-link font-semibold text-lg">Register</a>
+                @endauth
+            </div>
         </nav>
     </header>
 
