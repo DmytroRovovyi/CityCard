@@ -1,0 +1,37 @@
+@use '../style/color' as *;
+@use '../style/text' as *;
+
+.home-header {
+  background: $color-bg-lite-grey;
+  color: $color-text-dark;
+  font-family: $font-main;
+}
+
+.home-footer {
+  background: $color-bg-lite-grey;
+  color: $color-text-dark;
+  font-family: $font-main;
+}
+
+.home-sidebar {
+  color: $color-text-dark;
+}
+
+.home-content {
+  background: transparent;
+  color: $color-text-dark;
+  font-size: $font-size-base;
+  font-family: $font-main;
+}
+
+.home-link {
+  color: $text-link;
+  &:hover {
+    color: $text-link-hover;
+  }
+}
+
+.home-bg {
+  background-image: url('/images/bg-main.jpg');
+  background-size: cover;
+}
